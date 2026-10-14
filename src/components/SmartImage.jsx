@@ -7,6 +7,8 @@ function SmartImage({
   imageClassName = '',
   loading = 'lazy',
   fetchPriority = 'auto',
+  srcSet,
+  sizes,
   style,
 }) {
   const [hasError, setHasError] = useState(false)
@@ -33,6 +35,8 @@ function SmartImage({
       <img
         className={imageClassName}
         src={src}
+        srcSet={srcSet}
+        sizes={sizes}
         alt={alt}
         loading={loading}
         decoding="async"

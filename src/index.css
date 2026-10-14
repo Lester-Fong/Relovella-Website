@@ -4,6 +4,8 @@
   --color-charcoal: #292723;
   --color-white: #fffcf7;
   --color-antique-gold: #93703f;
+  --color-deep-gold: #8b6838;
+  --color-deep-gold-hover: #75552c;
   --color-taupe: #b6a797;
   --font-heading: 'Cormorant Garamond', Georgia, serif;
   --font-body: 'DM Sans', Arial, sans-serif;
@@ -62,6 +64,10 @@ button {
   overflow: clip;
 }
 
+#main-content:focus {
+  outline: none;
+}
+
 .skip-link {
   position: fixed;
   z-index: 1000;
@@ -81,6 +87,22 @@ button {
 :focus-visible {
   outline: 2px solid var(--color-antique-gold);
   outline-offset: 4px;
+}
+
+.about-section :focus-visible,
+.site-footer :focus-visible {
+  outline-color: var(--color-champagne);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
 }
 
 .site-header {
@@ -123,7 +145,7 @@ button {
   border: 1px solid var(--color-champagne);
   display: grid;
   place-items: center;
-  color: var(--color-antique-gold);
+  color: var(--color-deep-gold);
   font-family: var(--font-heading);
   font-size: 1.15rem;
   letter-spacing: 0;
@@ -240,7 +262,7 @@ button {
 
 .eyebrow {
   margin: 0 0 1.55rem;
-  color: var(--color-antique-gold);
+  color: var(--color-deep-gold);
   font-size: 0.69rem;
   font-weight: 600;
   letter-spacing: 0.22em;
@@ -320,7 +342,7 @@ button {
 
 .button-quiet:not(.is-disabled):hover {
   border-color: var(--color-antique-gold);
-  color: var(--color-antique-gold);
+  color: var(--color-deep-gold);
 }
 
 .price-note {
@@ -373,7 +395,7 @@ button {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  color: #7f766d;
+  color: #746c63;
   font-size: 0.61rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -386,7 +408,7 @@ button {
   place-content: center;
   gap: 0.2rem;
   background: #eee6da;
-  color: var(--color-antique-gold);
+  color: var(--color-deep-gold);
   text-align: center;
 }
 
@@ -525,7 +547,7 @@ button {
 
 .collection-number {
   margin: 0.32rem 0 0;
-  color: var(--color-antique-gold);
+  color: var(--color-deep-gold);
   font-size: 0.61rem;
   letter-spacing: 0.11em;
 }
@@ -544,6 +566,43 @@ button {
   color: #776f66;
   font-size: 0.82rem;
   line-height: 1.55;
+}
+
+.collection-inquiry {
+  width: min(100%, var(--content-width));
+  margin: clamp(4.5rem, 8vw, 7rem) auto 0;
+  padding-top: 1.8rem;
+  border-top: 1px solid rgba(147, 112, 63, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.collection-inquiry p {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(1.65rem, 2.6vw, 2.2rem);
+  line-height: 1.1;
+}
+
+.collection-inquiry-link {
+  min-height: 2.75rem;
+  border-bottom: 1px solid var(--color-antique-gold);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--color-deep-gold);
+  font-size: 0.69rem;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  transition: border-color 180ms ease, color 180ms ease;
+}
+
+.collection-inquiry-link:hover {
+  border-color: var(--color-charcoal);
+  color: var(--color-charcoal);
 }
 
 .about-section {
@@ -698,7 +757,7 @@ button {
 }
 
 .step-number {
-  color: var(--color-antique-gold);
+  color: var(--color-deep-gold);
   font-family: var(--font-heading);
   font-size: 1.12rem;
 }
@@ -730,17 +789,17 @@ button {
 
 .button-gold {
   min-width: min(100%, 19rem);
-  background: var(--color-antique-gold);
+  background: var(--color-deep-gold);
   color: var(--color-white);
 }
 
 .button-gold:not(.is-disabled):hover {
-  background: #7d5d31;
+  background: var(--color-deep-gold-hover);
 }
 
 .order-cta p {
   margin: 0;
-  color: #857b70;
+  color: #746c63;
   font-size: 0.72rem;
 }
 
@@ -814,7 +873,7 @@ button {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  color: #89827a;
+  color: #9e958b;
   font-size: 0.64rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -1072,7 +1131,15 @@ button {
   }
 
   .price-note {
-    display: none;
+    margin-top: 1.55rem;
+    display: flex;
+    gap: 0.65rem;
+    font-size: 0.66rem;
+    letter-spacing: 0.07em;
+  }
+
+  .price-note span {
+    width: 1.55rem;
   }
 
   .hero-grid {
@@ -1129,6 +1196,13 @@ button {
 
   .collection-caption h3 {
     font-size: 1.9rem;
+  }
+
+  .collection-inquiry {
+    margin-top: 4.25rem;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.15rem;
   }
 
   .about-visual {

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://relovella.vercel.app/sitemap.xml

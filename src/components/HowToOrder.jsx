@@ -1,4 +1,5 @@
 import FacebookLink from './FacebookLink.jsx'
+import { siteConfig } from '../data/siteConfig.js'
 
 const steps = [
   {
@@ -36,7 +37,9 @@ function HowToOrder() {
         </ol>
 
         <div className="order-cta">
-          <FacebookLink className="button button-gold">Message Us on Facebook</FacebookLink>
+          <FacebookLink className="button button-gold" destination="messenger">
+            {siteConfig.messengerUrl.trim() ? 'Message Us on Messenger' : 'Ask on Our Facebook Page'}
+          </FacebookLink>
           <p>We&apos;ll confirm the design and availability with you directly.</p>
         </div>
       </div>

@@ -10,6 +10,8 @@ function About() {
             className="about-image"
             imageClassName="about-image-element"
             src={siteConfig.assets.about}
+            srcSet={siteConfig.assets.aboutSrcSet}
+            sizes="(max-width: 56rem) 85vw, 42vw"
             alt="Crystal-accented women's watch styled on the wrist"
           />
           <p className="about-image-note">Feminine details, thoughtfully chosen.</p>

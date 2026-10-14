@@ -1,4 +1,5 @@
 import { siteConfig } from '../data/siteConfig.js'
+import FacebookLink from './FacebookLink.jsx'
 import SmartImage from './SmartImage.jsx'
 
 function Collection() {
@@ -19,6 +20,8 @@ function Collection() {
               className="collection-media"
               imageClassName="collection-image"
               src={collection.image}
+              srcSet={collection.srcSet}
+              sizes="(max-width: 42rem) calc(100vw - 2.3rem), (max-width: 56rem) 50vw, 58vw"
               alt={`${collection.name} women's fashion watch collection`}
               style={{ objectPosition: collection.position }}
             />
@@ -31,6 +34,13 @@ function Collection() {
             </div>
           </article>
         ))}
+      </div>
+
+      <div className="collection-inquiry">
+        <p>Seen a style that feels like you?</p>
+        <FacebookLink className="collection-inquiry-link" destination="messenger">
+          {siteConfig.messengerUrl.trim() ? 'Ask About a Style on Messenger' : 'Ask About a Style on Facebook'}
+        </FacebookLink>
       </div>
     </section>
   )

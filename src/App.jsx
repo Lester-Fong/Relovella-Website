@@ -8,12 +8,14 @@ import Footer from './components/Footer.jsx'
 function App() {
   return (
     <div className="site-shell">
-      <a className="skip-link" href="#collection">Skip to collection</a>
+      <a className="skip-link" href="#main-content">Skip to main content</a>
       <Header />
-      <Hero />
-      <Collection />
-      <About />
-      <HowToOrder />
+      <main id="main-content" tabIndex="-1">
+        <Hero />
+        <Collection />
+        <About />
+        <HowToOrder />
+      </main>
       <Footer />
     </div>
   )
