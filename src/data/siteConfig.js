@@ -3,7 +3,7 @@ export const siteConfig = {
   tagline: 'Timeless Elegance',
   facebookPageUrl: 'https://www.facebook.com/profile.php?id=61595353981524',
   // Add the verified direct Messenger URL here when it is available.
-  messengerUrl: '',
+  messengerUrl: 'https://www.facebook.com/messages/t/1389352024259738',
   priceRange: '₱159–₱189',
   assets: {
     logo: '/assets/relovella-logo.png',
