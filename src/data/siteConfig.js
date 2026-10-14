@@ -1,8 +1,8 @@
 export const siteConfig = {
   brandName: 'Relovella',
   tagline: 'Timeless Elegance',
-  facebookPageUrl: 'facebook.com/relovella.ph',
-  messengerUrl: 'm.me/relovella.ph',
+  facebookPageUrl: 'https://www.facebook.com/relovella.ph',
+  messengerUrl: 'https://m.me/relovella.ph',
   priceRange: '₱159–₱189',
   assets: {
     logo: '/assets/relovella-logo.png',
